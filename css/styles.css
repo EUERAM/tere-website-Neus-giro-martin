@@ -102,6 +102,24 @@ header ul{
 	list-style: none;
 	align-items: center; /* ensure menu items (links and the button) are vertically centered */
 }
+/* Logo sizing for .logotipo (requested exact dimensions) */
+.logotipo{
+	width: 128.701px;
+	height: 36.219px;
+	flex-shrink: 0;
+}
+
+/* Add requested padding values for .logotipo */
+.logotipo{
+	padding-left: 140px;
+	padding-right: 163px;
+	/* remove large vertical padding so the logo lines up with siblings */
+	padding-top: 0;
+	padding-bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 header li{
     padding:5px 30px;
 }
@@ -133,12 +151,12 @@ header button,
 	cursor: pointer;
 	color: #FFF;
 
-/* Normal */
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 26px; /* 144.444% */
+	/* Normal */
+	font-family: Inter;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px; /* 144.444% */
 }
 /* Specific styles for elements using the header-btn class */
 .header-btn{
@@ -298,6 +316,14 @@ p.second{
 .aplications img{
 	margin-right: 30px;
 }
+
+/* Layout for small store buttons: place images side-by-side with 50px gap */
+.small.button{
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	padding-right: 80px;
+}
 /* Link section container */
 .link-container{
 	background: var(--green); /* using existing --green variable */
@@ -347,8 +373,6 @@ input[type="text"]{
 	font-weight: 600;
 	line-height: 0; /* 0% */
 }
-
-
 /* Responsive: stack on small screens */
 @media (max-width: 800px){
 	.link-container{
@@ -362,7 +386,6 @@ input[type="text"]{
 	.link-form{width:100%; justify-content:center}
 	.link-input{flex:1; min-width:180px}
 }
-
 /* Benefits layout: grid so h1.lista and p.second sit side-by-side and .frase
    appears below them; image sits on the right spanning both rows with 200px left padding */
 .benefits .row.benefit-row{
@@ -394,3 +417,29 @@ input[type="text"]{
 	justify-self: end;
 	padding-left: 200px; /* requested spacing from the left */
 }
+.information{
+	display: flex;
+	justify-content: center; /* center children horizontally */
+	align-items: center;     /* center children vertically */
+	gap: 24px;              /* small gap between child divs */
+	max-width: 1200px;      /* constrain overall width */
+	margin: 0 auto;         /* center the .information container within its parent */
+	flex-wrap: nowrap;      /* keep them side-by-side */
+}
+.references{
+	display: flex;
+}
+
+/* Make all paragraphs inside .references a fixed width */
+.references p{
+    width: 206px;
+	height: 26px;
+	padding-right: 73px;
+}
+.references .twice{
+	padding-right: 106px;
+}
+.small-button{
+	display: flex;
+}
+
