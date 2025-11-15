@@ -84,7 +84,6 @@
 	text-decoration: none;
 	text-transform: none;
 }
-
 header{
     padding-top:80px;
 }
@@ -117,6 +116,43 @@ header a{
 }
 .green{
     color: var(--green);
+}
+/* Style header buttons and reuse for link button */
+header button,
+.header-btn{
+	background: var(--Green, #75BF7A);
+	color: var(--white); /* assume white text for contrast on green background */
+	border: none;
+	display: flex;
+	padding: 12px 38px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 5px;
+	font-weight: 700;
+	cursor: pointer;
+	color: #FFF;
+
+/* Normal */
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px; /* 144.444% */
+}
+
+/* Specific styles for elements using the header-btn class */
+.header-btn{
+    display: flex; /* as requested */
+    width: 260px;
+    height: 66.773px;
+    padding: 32px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--dark-gray, #272042);
+    color: var(--white);
 }
 /* Secció How Tere works */
 .how-it-works .row{
@@ -235,29 +271,7 @@ header a{
 	outline: none;
 	font-size: 16px;
 }
-/* Style header buttons and reuse for link button */
-header button,
-.header-btn{
-	background: var(--Green, #75BF7A);
-	color: var(--white); /* assume white text for contrast on green background */
-	border: none;
-	display: inline-flex;
-	padding: 12px 38px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 5px;
-	font-weight: 700;
-	cursor: pointer;
-	color: #FFF;
 
-/* Normal */
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 26px; /* 144.444% */
-}
 
 /* Responsive: stack on small screens */
 @media (max-width: 800px){
