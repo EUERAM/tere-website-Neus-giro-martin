@@ -138,6 +138,23 @@ header a{
 .how-it-works .right .step .step-number{
 	margin-left: auto;
 }
+
+/* Canvi lloc num de how it works */
+.how-it-works .row > .column:first-child .step{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 12px 20px;
+	align-items: center;
+}
+.how-it-works .row > .column:first-child .step .step-number{
+	grid-column: 2;
+	justify-self: end;
+}
+.how-it-works .row > .column:first-child .step h3,
+.how-it-works .row > .column:first-child .step p{
+	grid-column: 1;
+	text-align: left; /* override the global right-align for these steps */
+}
 .step-number{
 	color: #75BF7A;
 	text-align: center;
