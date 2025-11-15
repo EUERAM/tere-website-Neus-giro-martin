@@ -89,7 +89,7 @@ header{
 }
 .container{
     width: 1200px;
-    margin:auto;
+    margin: auto;
     
 }
 .flex{
@@ -111,8 +111,8 @@ header ul{
 
 /* Add requested padding values for .logotipo */
 .logotipo{
-	padding-left: 140px;
-	padding-right: 163px;
+	padding-left: 60px;
+	padding-right: 103px;
 	/* remove large vertical padding so the logo lines up with siblings */
 	padding-top: 0;
 	padding-bottom: 0;
@@ -424,7 +424,53 @@ input[type="text"]{
 	gap: 24px;              /* small gap between child divs */
 	max-width: 1200px;      /* constrain overall width */
 	margin: 0 auto;         /* center the .information container within its parent */
-	flex-wrap: nowrap;      /* keep them side-by-side */
+	flex-wrap: wrap;      /* allow children to wrap so copyright can sit below */
+
+}
+/* Styles for the final centered paragraph under the information block */
+.last{
+	color: var(--Green, #75BF7A);
+	text-align: center;
+	/* small */
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	width: 590px;
+	margin: 16px auto 40px; /* center horizontally and give some vertical spacing */
+}
+
+/* Center the copyright container (wraps the .last paragraph) */
+.copyright{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 100%; /* take full row so it appears below the other children */
+	order: 999;       /* ensure it stays last */
+}
+
+/* Ensure the small store buttons stay on the top row with logo and references */
+.information > .small.button{
+	order: 2;           /* ensure it follows .references */
+	flex: 0 0 auto;     /* do not grow/shrink to force wrapping */
+	align-self: center;  /* vertically center relative to siblings */
+}
+
+/* Make sure logo and references don't force wrap unnecessarily */
+.information > .logotipo{
+	order: 0;
+	flex: 0 0 auto;
+}
+.information > .references{
+	order: 1;
+	flex: 0 1 auto;
+}
+
+/* Ensure copyright stays on its own row */
+.copyright{ 
+	flex-basis: 100%;
+	order: 99;
 }
 .references{
 	display: flex;
@@ -437,7 +483,7 @@ input[type="text"]{
 	padding-right: 73px;
 }
 .references .twice{
-	padding-right: 106px;
+	padding-right: 50px;
 }
 .small-button{
 	display: flex;
