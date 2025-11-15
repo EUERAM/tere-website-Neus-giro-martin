@@ -177,12 +177,16 @@ line-height: 0; /* 0% */
 	justify-content: center;
 }
 .how-it-works .step p, .how-it-works .step h3{
-	text-align: right;
+    text-align: right;
+}
+
+/* Make paragraph text inside steps justified */
+.how-it-works .step p{
+    text-align: justify;
 }
 .how-it-works .right .step .step-number{
 	margin-left: auto;
 }
-
 /* Canvi lloc num de how it works */
 .how-it-works .row > .column:first-child .step{
 	display: grid;
@@ -197,7 +201,13 @@ line-height: 0; /* 0% */
 .how-it-works .row > .column:first-child .step h3,
 .how-it-works .row > .column:first-child .step p{
 	grid-column: 1;
-	text-align: left; /* override the global right-align for these steps */
+	text-align: right; /* user requested right alignment for steps 1 and 3 */
+}
+
+/* Left-align headings and paragraphs in the last column (steps 2 and 4) */
+.how-it-works .row > .column:last-child .step h3,
+.how-it-works .row > .column:last-child .step p{
+	text-align: left;
 }
 .step-number{
 	color: #75BF7A;
@@ -259,6 +269,7 @@ line-height: 0; /* 0% */
 	align-items: center;
 	justify-content: space-between;
 	gap: 20px;
+	margin-bottom: 120px; /* space between link section and how-it-works */
 }
 .link-container .description-hero{
 	color: var(--white);
