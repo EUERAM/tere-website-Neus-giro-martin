@@ -124,3 +124,57 @@ header a{
     grid-template-columns: repeat(3, 1fr);
     gap:40px;
 }
+
+/* Link section container */
+.link-container{
+	background: var(--green); /* using existing --green variable */
+	border-radius: 12px;
+	padding: 28px 32px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+.link-container .description-hero{
+	color: var(--white);
+	margin: 0;
+	font-size: 20px;
+	max-width: 60%;
+}
+.link-form{
+	display:flex;
+	align-items:center;
+	gap:10px;
+}
+.link-input{
+	padding: 10px 14px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+/* Style header buttons and reuse for link button */
+header button,
+.header-btn{
+	background: var(--white);
+	color: var(--green);
+	border: none;
+	padding: 10px 16px;
+	border-radius: 8px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 800px){
+	.link-container{
+		flex-direction: column;
+		text-align: center;
+	}
+	.link-container .description-hero{
+		max-width: 100%;
+		margin-bottom: 12px;
+	}
+	.link-form{width:100%; justify-content:center}
+	.link-input{flex:1; min-width:180px}
+}
