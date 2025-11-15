@@ -212,6 +212,25 @@ line-height: 0; /* 0% */
 	font-weight: 800;
 	line-height: 37.019px; /* 108.537% */
 }
+
+/* Pagination dots */
+.dots{ display:flex; gap:10px; justify-content:center; margin-top: 24px; }
+.dot{
+    width: 12.772px;
+    height: 12.772px;
+    display: inline-block;
+    background-color: #75BF7A; /* fallback for non-SVG */
+    border-radius: 50%;
+    vertical-align: middle;
+    fill: #75BF7A; /* for SVG children */
+	align-items: center;
+}
+.dot.active{ 
+	opacity: 1; }
+
+.dot{ 
+	opacity: 0.4; }
+
 .normal{
 	color: #9E9DA2;
 	text-align: right;
