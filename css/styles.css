@@ -124,7 +124,32 @@ header a{
     grid-template-columns: repeat(3, 1fr);
     gap:40px;
 }
-
+/* Secció Hero */
+.hero{
+	display: flex;
+	margin-bottom: 36px;
+	margin-top: 56px;
+}
+.big-title {
+	color: var(--Black, #000);
+	font-family: Inter;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 65.91px; /* 102.985% */
+	margin-top: 110px;
+}
+.info .description-hero{
+	text-align: left;
+	padding-right: 100px;
+}
+.aplications {
+	margin-top: 63px;
+	padding-right: 50px;
+}
+.aplications img{
+	margin-right: 30px;
+}
 /* Link section container */
 .link-container{
 	background: var(--green); /* using existing --green variable */
