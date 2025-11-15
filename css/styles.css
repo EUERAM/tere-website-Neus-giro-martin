@@ -176,10 +176,6 @@ line-height: 0; /* 0% */
 	align-items: center;
 	justify-content: center;
 }
-.how-it-works .step p, .how-it-works .step h3{
-    text-align: right;
-}
-
 /* Make paragraph text inside steps justified */
 .how-it-works .step p{
     text-align: justify;
@@ -188,34 +184,24 @@ line-height: 0; /* 0% */
 	margin-left: auto;
 }
 /* Canvi lloc num de how it works */
-.how-it-works .row > .column:first-child .step{
-	display: grid;
-	grid-template-columns: 1fr auto;
-	gap: 12px 20px;
-	align-items: center;
-}
-
-/* Place the step number to the right for steps in the first column (1 and 3) */
 .how-it-works .row > .column:first-child .step .step-number{
     grid-column: 2;
     justify-self: end;
 }
-
 .how-it-works .row > .column:first-child .step h3,
 .how-it-works .row > .column:first-child .step p{
 	grid-column: 1;
 	text-align: right; /* user requested right alignment for steps 1 and 3 */
 }
 
+/* spacing between step 1 and step 3 in the left column */
+.how-it-works .row > .column.left .step:first-child{
+    padding-bottom: 10px;
+}
 /* Left-align headings and paragraphs in the last column (steps 2 and 4) */
 .how-it-works .row > .column:last-child .step h3,
 .how-it-works .row > .column:last-child .step p{
 	text-align: left;
-}
-
-/* Add vertical spacing between step 2 and step 4 in the right column */
-.how-it-works .row > .column:last-child .step:nth-child(2){
-    padding-top: 70px;
 }
 .step-number{
 	color: #75BF7A;
