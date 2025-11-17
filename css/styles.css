@@ -417,6 +417,28 @@ input[type="text"]{
 	justify-self: end;
 	padding-left: 200px; /* requested spacing from the left */
 }
+
+/* Reverse layout for the second benefit row: image on the left, text on the right */
+.benefits .row.benefit-row:nth-of-type(2) .image{
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	justify-self: start;
+	padding-left: 0; /* remove big left padding when image is left */
+}
+.benefits .row.benefit-row:nth-of-type(2) .box{
+	grid-column: 2;
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: auto 1fr; /* keep h1 and text side-by-side */
+	gap: 30px;
+	align-items: center;
+}
+.benefits .row.benefit-row:nth-of-type(2) .frase{
+	grid-column: 2;
+	grid-row: 2;
+	margin-top: 10px;
+	text-align: left;
+}
 .information{
 	display: flex;
 	justify-content: center; /* center children horizontally */
