@@ -316,14 +316,29 @@ p.second{
 .aplications img{
 	margin-right: 30px;
 }
-
+/*FOOTER*/
 /* Layout for small store buttons: place images side-by-side with 50px gap */
 .small.button{
-	display: flex;
-	align-items: center;
-	gap: 50px;
-	padding-right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0px; /* changed to 0 as requested */
 }
+.references{
+	display: flex;
+}
+.references .twice{
+	padding-right: 0px;
+}
+
+/* Make all paragraphs inside .references a fixed width */
+.references p{
+    width: 206px;
+	height: 26px;
+	padding-right: 30px;
+}
+
+
 /* Link section container */
 .link-container{
 	background: var(--green); /* using existing --green variable */
@@ -415,7 +430,8 @@ input[type="text"]{
 	grid-column: 2;
 	grid-row: 1 / span 2; /* image spans both rows and sits to the right */
 	justify-self: end;
-	padding-left: 200px; /* requested spacing from the left */
+	padding-left: 126px; /* adjusted spacing from the left to 226px */
+	justify-content: center;
 }
 
 /* Reverse layout for the second benefit row: image on the left, text on the right */
@@ -439,16 +455,7 @@ input[type="text"]{
 	margin-top: 10px;
 	text-align: left;
 }
-.information{
-	display: flex;
-	justify-content: center; /* center children horizontally */
-	align-items: center;     /* center children vertically */
-	gap: 24px;              /* small gap between child divs */
-	max-width: 1200px;      /* constrain overall width */
-	margin: 0 auto;         /* center the .information container within its parent */
-	flex-wrap: wrap;      /* allow children to wrap so copyright can sit below */
 
-}
 /* Styles for the final centered paragraph under the information block */
 .last{
 	color: var(--Green, #75BF7A);
@@ -459,47 +466,27 @@ input[type="text"]{
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	width: 590px;
+	width: 0px;
 	margin: 16px auto 40px; /* center horizontally and give some vertical spacing */
 }
 
-/* Center the copyright container (wraps the .last paragraph) */
-.copyright{
+
+
+
+/* Add 80px spacing between the benefits section and the footer */
+.benefits{
+    margin-bottom: 80px;
+}
+
+/* Ensure all direct children of .information sit side-by-side */
+.information{
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap; /* keep children on a single line */
+	gap: 24px;
 	align-items: center;
-	flex-basis: 100%; /* take full row so it appears below the other children */
-	order: 999;       /* ensure it stays last */
-}
-
-/* Ensure the small store buttons stay on the top row with logo and references */
-.information > .small.button{
-	order: 0;           /* keep before .copyright */
-	flex: 0 0 auto;     /* do not grow/shrink to force wrapping */
-	align-self: center;  /* vertically center relative to siblings */
-}
-
-/* Make sure logo and references don't force wrap unnecessarily */
-.information > .logotipo,
-.information > .references{
-	flex: 0 1 auto;
-}
-.references{
-	display: flex;
-}
-
-/* Make all paragraphs inside .references a fixed width */
-.references p{
-    width: 206px;
-	height: 26px;
-	padding-right: 73px;
-}
-.references .twice{
-	padding-right: 50px;
-}
-.small-button{
-	display: flex;
-}
-.frase{
-	width: auto;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow-x: auto; /* allow horizontal scroll if content overflows */
 }
