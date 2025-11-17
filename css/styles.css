@@ -330,6 +330,23 @@ p.second{
 .references .twice{
 	padding-right: 0px;
 }
+.copyright{
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+
+
+.copy{
+	color: var(--Green, #75BF7A);
+	text-align: center;
+
+/* small */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 
 /* Make all paragraphs inside .references a fixed width */
 .references p{
