@@ -452,25 +452,15 @@ input[type="text"]{
 
 /* Ensure the small store buttons stay on the top row with logo and references */
 .information > .small.button{
-	order: 2;           /* ensure it follows .references */
+	order: 0;           /* keep before .copyright */
 	flex: 0 0 auto;     /* do not grow/shrink to force wrapping */
 	align-self: center;  /* vertically center relative to siblings */
 }
 
 /* Make sure logo and references don't force wrap unnecessarily */
-.information > .logotipo{
-	order: 0;
-	flex: 0 0 auto;
-}
+.information > .logotipo,
 .information > .references{
-	order: 1;
 	flex: 0 1 auto;
-}
-
-/* Ensure copyright stays on its own row */
-.copyright{ 
-	flex-basis: 100%;
-	order: 99;
 }
 .references{
 	display: flex;
@@ -488,4 +478,6 @@ input[type="text"]{
 .small-button{
 	display: flex;
 }
-
+.frase{
+	width: auto;
+}
