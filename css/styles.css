@@ -450,7 +450,9 @@ input[type="text"]{
 	padding-left: 126px; /* adjusted spacing from the left to 226px */
 	justify-content: center;
 }
-
+.box{
+	margin-right: 30px;
+}
 /* Reverse layout for the second benefit row: image on the left, text on the right */
 .benefits .row.benefit-row:nth-of-type(2) .image{
 	grid-column: 1;
